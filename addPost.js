@@ -1,3 +1,5 @@
+  //компонент для создания поста из инпута
+
 import "./styles.css";
 import {useState} from 'react'; 
 
