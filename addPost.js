@@ -2,9 +2,10 @@ import "./styles.css";
 import {useState} from 'react'; 
 
 export default function App() {
-
+  
   const [post, setPost] = useState([{id: 1, title: 'Название поста', body: 'Сам пост здесь'}]);
   
+  //Создаем переменную newPost для изменения состояния новых постов
   const [newPost, setNewPost] = useState({title: '', body: ''});
   
   const addPost =(e) => {
@@ -20,6 +21,7 @@ export default function App() {
         <input value={newPost.body} onChange={e => setNewPost({...newPost, body: e.target.value})}/>
         <button onClick={addPost}>Добавить пост</button>
       </form>
+    //index используем для нумерации посов в списке
       {post.map((e, index) => <div key={newPost.id}>{index + 1} | {e.title} | {e.body}</div>)}
     </div>
   );
