@@ -21,7 +21,7 @@ export default function App() {
         <input value={newPost.body} onChange={e => setNewPost({...newPost, body: e.target.value})}/>
         <button onClick={addPost}>Добавить пост</button>
       </form>
-  //index используем для нумерации посов в списке
+  //index используем для нумерации постов в списке
       {post.map((e, index) => <div key={newPost.id}>{index + 1} | {e.title} | {e.body}</div>)}
     </div>
   );
